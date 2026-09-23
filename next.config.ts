@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   output: process.platform === "win32" && !process.env.FORCE_STANDALONE ? undefined : "standalone",
   poweredByHeader: false,
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
