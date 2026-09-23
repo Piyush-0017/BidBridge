@@ -1,0 +1,1211 @@
+{
+  "users": [
+    {
+      "id": "bidder-1",
+      "email": "procurement@abctech.in",
+      "name": "ABC Tech Solutions Private Limited",
+      "role": "BIDDER",
+      "bidderProfile": {
+        "companyName": "ABC Tech Solutions Private Limited",
+        "gstin": "27ABCDE1234F1Z5",
+        "pan": "ABCDE1234F",
+        "udyamNumber": "UDYAM-MH-01-0087654"
+      }
+    },
+    {
+      "id": "officer-1",
+      "email": "rajesh.kumar@mha.gov.in",
+      "name": "Rajesh Kumar",
+      "role": "OFFICER",
+      "officerProfile": {
+        "department": "Ministry of Home Affairs",
+        "designation": "Deputy Secretary (Procurement)"
+      }
+    }
+  ],
+  "tenders": [
+    {
+      "id": "tender-1789298685470",
+      "referenceNo": "TND-TEST-1789298681695",
+      "title": "Automated Functional Verification Tender (IT Infrastructure)",
+      "department": "Ministry of Electronics & Information Technology",
+      "category": "GOODS",
+      "estimatedValue": 45000000,
+      "bidEndAt": "2026-09-28T11:24:45.470Z",
+      "status": "OPEN",
+      "source": "PORTAL",
+      "createdAt": "2026-09-13T11:24:45.470Z",
+      "requirements": [
+        {
+          "code": "REQ-01",
+          "description": "Average Turnover > 15 Cr",
+          "category": "FINANCIAL",
+          "mandatory": true
+        },
+        {
+          "code": "REQ-02",
+          "description": "Class 3 DSC and CVC Clearance",
+          "category": "STATUTORY",
+          "mandatory": true
+        }
+      ],
+      "_count": {
+        "bids": 1
+      }
+    },
+    {
+      "id": "tender-1",
+      "referenceNo": "GEM/2025/B/6123456",
+      "title": "Supply, Installation and Commissioning of Smart IP CCTV Cameras & Command Center",
+      "department": "Ministry of Home Affairs • Central Armed Police Forces",
+      "category": "Surveillance & Electronic Security",
+      "description": "Comprehensive turnkey installation of 4K IP cameras, enterprise NVR servers, video analytics, and unified control room integration.",
+      "estimatedValue": 20558000,
+      "bidEndAt": "2026-09-28T18:00:00.000Z",
+      "status": "OPEN",
+      "source": "GeM",
+      "createdAt": "2026-08-01T10:00:00.000Z",
+      "requirements": [
+        {
+          "id": "req-1",
+          "code": "TECH-01",
+          "description": "4K UHD Smart IP PTZ Camera with 30x Optical Zoom",
+          "category": "Technical",
+          "mandatory": true,
+          "weight": 30
+        },
+        {
+          "id": "req-2",
+          "code": "TECH-02",
+          "description": "64-Channel Enterprise NVR RAID 6 (128TB Storage)",
+          "category": "Technical",
+          "mandatory": true,
+          "weight": 30
+        },
+        {
+          "id": "req-3",
+          "code": "MII-01",
+          "description": "Make In India Local Content >= 50% Certification",
+          "category": "Statutory",
+          "mandatory": true,
+          "weight": 20
+        },
+        {
+          "id": "req-4",
+          "code": "DOC-01",
+          "description": "Valid GST Registration Certificate & PAN Card",
+          "category": "Statutory",
+          "mandatory": true,
+          "weight": 20
+        }
+      ],
+      "_count": {
+        "bids": 2
+      }
+    },
+    {
+      "id": "tender-2",
+      "referenceNo": "GEM/2025/B/6124100",
+      "title": "Cloud Hosting, Disaster Recovery & High-Availability Database Cluster Services",
+      "department": "National Informatics Centre (NIC) • MeitY",
+      "category": "Cloud & Data Center Infrastructure",
+      "description": "Tier-IV MeitY empaneled cloud infrastructure with RPO < 15 mins and RTO < 1 hour for mission-critical central services.",
+      "estimatedValue": 38500000,
+      "bidEndAt": "2026-10-15T15:00:00.000Z",
+      "status": "OPEN",
+      "source": "GeM",
+      "createdAt": "2026-08-05T12:00:00.000Z",
+      "_count": {
+        "bids": 1
+      }
+    },
+    {
+      "id": "tender-3",
+      "referenceNo": "NIT/RAIL/2025/CCTV-AMC",
+      "title": "Comprehensive Annual Maintenance Contract (CAMC) for Surveillance & Video Analytics",
+      "department": "Ministry of Railways • Northern Railway Zone",
+      "category": "Annual Maintenance & Support Services",
+      "description": "24x7 corrective and preventive maintenance across 42 railway divisions with 99.8% SLA.",
+      "estimatedValue": 4800000,
+      "bidEndAt": "2026-09-22T17:00:00.000Z",
+      "status": "OPEN",
+      "source": "CPPP",
+      "createdAt": "2026-07-20T09:00:00.000Z",
+      "_count": {
+        "bids": 1
+      }
+    },
+    {
+      "id": "tender-4",
+      "referenceNo": "GEM/2025/B/9018241",
+      "title": "Procurement of Enterprise Hyperconverged Infrastructure (HCI) Nodes",
+      "department": "Defence Research and Development Organisation (DRDO)",
+      "category": "IT Hardware & High Performance Computing",
+      "description": "Supply of 12 node HCI cluster with NVMe storage and dual 100GbE RDMA network fabrics.",
+      "estimatedValue": 54000000,
+      "bidEndAt": "2026-10-05T14:30:00.000Z",
+      "status": "OPEN",
+      "source": "GeM",
+      "createdAt": "2026-08-10T14:00:00.000Z",
+      "_count": {
+        "bids": 0
+      }
+    },
+    {
+      "id": "tender-5",
+      "referenceNo": "GEM/2025/B/8712033",
+      "title": "Supply and Commissioning of Secure Dual-Band VHF/UHF Tactical Radios",
+      "department": "Border Security Force (BSF) Headquarters",
+      "category": "Telecommunications & Defense Electronics",
+      "description": "Mil-spec encrypted frequency-hopping portable transceivers for tactical ground operations.",
+      "estimatedValue": 12500000,
+      "bidEndAt": "2026-09-30T17:00:00.000Z",
+      "status": "OPEN",
+      "source": "GeM",
+      "createdAt": "2026-08-12T11:00:00.000Z",
+      "_count": {
+        "bids": 0
+      }
+    },
+    {
+      "id": "tender-6",
+      "referenceNo": "NIT/MORTH/2025/FASTAG-09",
+      "title": "Automated Number Plate Recognition (ANPR) Cameras & Barrier Controllers",
+      "department": "National Highways Authority of India (NHAI)",
+      "category": "Highway Tolling & Intelligent Transportation",
+      "description": "Supply of high-speed ANPR optical cameras and optical loop controllers for multi-lane free-flow toll plazas.",
+      "estimatedValue": 17200000,
+      "bidEndAt": "2026-10-12T16:00:00.000Z",
+      "status": "PUBLISHED",
+      "source": "CPPP",
+      "createdAt": "2026-08-15T09:30:00.000Z",
+      "_count": {
+        "bids": 0
+      }
+    }
+  ],
+  "bids": [
+    {
+      "id": "bid-1789298703029",
+      "tenderId": "tender-1789298685470",
+      "bidderId": "cmtzprc090003r59g3p5vy53s",
+      "status": "SUBMITTED",
+      "complianceScore": 98,
+      "riskLevel": "LOW",
+      "technicalScore": 95,
+      "financialScore": 92,
+      "evaluatedValue": 42500000,
+      "submittedAt": "2026-09-13T11:25:03.029Z",
+      "receiptNo": "ACK-CPPP-2025-959112",
+      "hash": "sha256-a9b8c7d6e5f4a3b2c1d0",
+      "createdAt": "2026-09-13T11:25:03.029Z",
+      "updatedAt": "2026-09-13T11:25:03.029Z",
+      "tender": {
+        "id": "tender-1789298685470",
+        "referenceNo": "TND-TEST-1789298681695",
+        "title": "Automated Functional Verification Tender (IT Infrastructure)",
+        "department": "Ministry of Electronics & Information Technology",
+        "status": "OPEN",
+        "estimatedValue": 45000000
+      },
+      "bidder": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in",
+        "bidderProfile": {
+          "companyName": "ABC Tech Solutions Private Limited",
+          "gstin": "27ABCDE1234F1Z5",
+          "pan": "ABCDE1234F",
+          "udyamNumber": "UDYAM-MH-01-0087654"
+        }
+      },
+      "recommendation": {
+        "action": "QUALIFY",
+        "confidence": 97,
+        "explanation": "All mandatory specs matched, GSTN and PAN active, compliant with Class-1 MII guidelines."
+      }
+    },
+    {
+      "id": "bid-1789239162847",
+      "tenderId": "tender-1",
+      "bidderId": "cmtyqpi420003r5icvdgho7r5",
+      "status": "SUBMITTED",
+      "complianceScore": 98,
+      "riskLevel": "LOW",
+      "technicalScore": 95,
+      "financialScore": 92,
+      "evaluatedValue": 20558000,
+      "submittedAt": "2026-09-12T18:52:42.847Z",
+      "receiptNo": "ACK-CPPP-2025-998811",
+      "hash": "e8a719c2f5d3410b91e784501a3cd4b76e89021a8f9b4c3e2d1056789abcdef0",
+      "createdAt": "2026-09-12T18:52:42.847Z",
+      "updatedAt": "2026-09-12T18:52:42.847Z",
+      "tender": {
+        "id": "tender-1",
+        "referenceNo": "GEM/2025/B/6123456",
+        "title": "Supply, Installation and Commissioning of Smart IP CCTV Cameras & Command Center",
+        "department": "Ministry of Home Affairs • Central Armed Police Forces",
+        "status": "OPEN",
+        "estimatedValue": 20558000
+      },
+      "bidder": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in",
+        "bidderProfile": {
+          "companyName": "ABC Tech Solutions Private Limited",
+          "gstin": "27ABCDE1234F1Z5",
+          "pan": "ABCDE1234F",
+          "udyamNumber": "UDYAM-MH-01-0087654"
+        }
+      },
+      "recommendation": {
+        "action": "QUALIFY",
+        "confidence": 97,
+        "explanation": "All mandatory specs matched, GSTN and PAN active, compliant with Class-1 MII guidelines."
+      }
+    },
+    {
+      "id": "bid-1",
+      "tenderId": "tender-1",
+      "bidderId": "bidder-1",
+      "status": "TECHNICALLY_QUALIFIED",
+      "complianceScore": 99,
+      "riskLevel": "LOW",
+      "technicalScore": 95,
+      "financialScore": 92,
+      "evaluatedValue": 20558000,
+      "submittedAt": "2026-09-12T18:52:01.975Z",
+      "receiptNo": "ACK-CPPP-2025-998811",
+      "hash": "e8a719c2f5d3410b91e784501a3cd4b76e89021a8f9b4c3e2d1056789abcdef0",
+      "createdAt": "2026-08-16T14:30:00.000Z",
+      "updatedAt": "2026-09-12T18:52:04.736Z",
+      "tender": {
+        "id": "tender-1",
+        "referenceNo": "GEM/2025/B/6123456",
+        "title": "Supply, Installation and Commissioning of Smart IP CCTV Cameras & Command Center",
+        "department": "Ministry of Home Affairs • Central Armed Police Forces",
+        "status": "OPEN",
+        "estimatedValue": 20558000,
+        "bidEndAt": "2026-09-28T18:00:00.000Z"
+      },
+      "bidder": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in",
+        "bidderProfile": {
+          "companyName": "ABC Tech Solutions Private Limited",
+          "gstin": "27ABCDE1234F1Z5",
+          "pan": "ABCDE1234F"
+        }
+      },
+      "recommendation": {
+        "action": "QUALIFY",
+        "confidence": 98,
+        "explanation": "All technical clauses complied. GSTN/PAN validated. Class-I MII declared at 68%."
+      },
+      "decision": {
+        "id": "dec-1789239124736",
+        "officerId": "officer-1",
+        "decision": "QUALIFY",
+        "reason": "Proposal satisfies all mandatory technical specifications and Class-I MII criteria. Approved by Technical Evaluation Committee.",
+        "createdAt": "2026-09-12T18:52:04.736Z"
+      }
+    },
+    {
+      "id": "bid-2",
+      "tenderId": "tender-2",
+      "bidderId": "bidder-1",
+      "status": "UNDER_EVALUATION",
+      "complianceScore": 94,
+      "riskLevel": "LOW",
+      "technicalScore": 91,
+      "financialScore": 90,
+      "evaluatedValue": 38500000,
+      "submittedAt": "2026-08-04T11:20:00.000Z",
+      "receiptNo": "ACK-CPPP-2025-771203",
+      "createdAt": "2026-08-04T11:20:00.000Z",
+      "updatedAt": "2026-08-04T11:20:00.000Z",
+      "tender": {
+        "id": "tender-2",
+        "referenceNo": "GEM/2025/B/6124100",
+        "title": "Cloud Hosting, Disaster Recovery & High-Availability Database Cluster Services",
+        "department": "National Informatics Centre (NIC) • MeitY",
+        "status": "OPEN",
+        "estimatedValue": 38500000
+      },
+      "bidder": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in",
+        "bidderProfile": {
+          "companyName": "ABC Tech Solutions Private Limited",
+          "gstin": "27ABCDE1234F1Z5",
+          "pan": "ABCDE1234F"
+        }
+      },
+      "recommendation": {
+        "action": "QUALIFY",
+        "confidence": 94,
+        "explanation": "MeitY audit certificate valid. Tier-IV specifications verified."
+      }
+    },
+    {
+      "id": "bid-3",
+      "tenderId": "tender-3",
+      "bidderId": "bidder-1",
+      "status": "TECHNICALLY_QUALIFIED",
+      "complianceScore": 96,
+      "riskLevel": "LOW",
+      "technicalScore": 96,
+      "financialScore": 94,
+      "evaluatedValue": 4800000,
+      "submittedAt": "2026-07-28T16:45:00.000Z",
+      "receiptNo": "ACK-CPPP-2025-662914",
+      "createdAt": "2026-07-28T16:45:00.000Z",
+      "updatedAt": "2026-08-02T10:15:00.000Z",
+      "tender": {
+        "id": "tender-3",
+        "referenceNo": "NIT/RAIL/2025/CCTV-AMC",
+        "title": "Comprehensive Annual Maintenance Contract (CAMC) for Surveillance & Video Analytics",
+        "department": "Ministry of Railways • Northern Railway Zone",
+        "status": "OPEN",
+        "estimatedValue": 4800000
+      },
+      "bidder": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in",
+        "bidderProfile": {
+          "companyName": "ABC Tech Solutions Private Limited",
+          "gstin": "27ABCDE1234F1Z5",
+          "pan": "ABCDE1234F"
+        }
+      },
+      "decision": {
+        "id": "dec-1",
+        "officerId": "officer-1",
+        "decision": "QUALIFY",
+        "reason": "Full compliance with CAMC SLA schedules and past performance in Northern Railway divisions verified.",
+        "createdAt": "2026-08-02T10:15:00.000Z"
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "dec-1789239124736",
+      "bidId": "bid-1",
+      "officerId": "officer-1",
+      "decision": "QUALIFY",
+      "reason": "Proposal satisfies all mandatory technical specifications and Class-I MII criteria. Approved by Technical Evaluation Committee.",
+      "createdAt": "2026-09-12T18:52:04.736Z",
+      "bid": {
+        "id": "bid-1",
+        "tender": {
+          "id": "tender-1",
+          "referenceNo": "GEM/2025/B/6123456",
+          "title": "Supply, Installation and Commissioning of Smart IP CCTV Cameras & Command Center",
+          "department": "Ministry of Home Affairs • Central Armed Police Forces",
+          "status": "OPEN",
+          "estimatedValue": 20558000,
+          "bidEndAt": "2026-09-28T18:00:00.000Z"
+        },
+        "bidder": {
+          "id": "bidder-1",
+          "name": "ABC Tech Solutions Private Limited",
+          "email": "procurement@abctech.in",
+          "bidderProfile": {
+            "companyName": "ABC Tech Solutions Private Limited",
+            "gstin": "27ABCDE1234F1Z5",
+            "pan": "ABCDE1234F"
+          }
+        }
+      },
+      "officer": {
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "dec-1",
+      "bidId": "bid-3",
+      "officerId": "officer-1",
+      "decision": "QUALIFY",
+      "reason": "Full compliance with CAMC SLA schedules and past performance in Northern Railway divisions verified.",
+      "createdAt": "2026-08-02T10:15:00.000Z",
+      "bid": {
+        "tender": {
+          "referenceNo": "NIT/RAIL/2025/CCTV-AMC"
+        },
+        "bidder": {
+          "bidderProfile": {
+            "companyName": "ABC Tech Solutions Private Limited"
+          }
+        }
+      },
+      "officer": {
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1789363877925-748",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "f6d7851a6a49391ebc20be9f306b77a6e959330ce08f6764f58b5e0c466d2d40",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:31:17.925Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363870922-754",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "cdc044cce513b717c5a49b7032bf0bf74f3f4264f72d1b3339ef5bcdb7365f4a",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:31:10.922Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363865393-709",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "d356e0e443d2580750a94974cb11cd5087545606301416880173bc26df358959",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:31:05.393Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363843906-284",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "96ab4ffbba91acf5c6ded3c1a7b1a26a44900054ced8941a7dee2a9d294f1c48",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:30:43.906Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363571191-660",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "00481da8bb781412dec9fc513347c2e18786d62e74711d6dca58240626daefb8",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:26:11.191Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363564249-550",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "3aee7d715a968eeb6f09e32a03198d6d735f0f34bb2d559b00b2d228e73ecc48",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:26:04.249Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363554129-700",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "360d5b29d7761cf4ce7f9eb25f0b399fad5fe21b6372f6dc13e7406c7f32016f",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:25:54.129Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789363538695-689",
+      "actorId": "bidder-1",
+      "action": "COMPLIANCE_ORCHESTRATOR_EVALUATION",
+      "entityType": "BidderCompliance",
+      "entityId": "BIDDER-ABC_Technology_Private_Limited",
+      "details": {
+        "complianceScore": 92,
+        "riskScore": 8,
+        "recommendation": "RECOMMEND_QUALIFY",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "d1d4fd3d8c77643bb3622e52ade7cb4f10d2a3e738bea2f58b7fdfd4adfe071b",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-14T05:25:38.696Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319729899-788",
+      "actorId": "bidder-1",
+      "action": "FINANCIAL_ENVELOPE_DUAL_KEY_DECRYPTED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/6123456",
+      "details": {
+        "officer1": "Rajesh Kumar",
+        "officer2": "Dr. Sunita Verma",
+        "decryptionHash": "2cb0f1c3ccef0da55c9c1942e3e149ab3f3adbe8d3418eea6639d45fed9830fe",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "ae64de7e0ecbe847e76db9e71710bff6ac6b86226335d3a3e11056c1ac58f4a4",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:15:29.899Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319728779-164",
+      "actorId": "bidder-1",
+      "action": "FINANCIAL_KEY_SHARE_AUTHORIZED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/6123456",
+      "details": {
+        "officerIndex": 1,
+        "signedBy": "Rajesh Kumar",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "656746411a0d3e967337855727410a25061ace1d1cd367c274885e5c7eae2920",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:15:28.779Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319162636-242",
+      "actorId": "bidder-1",
+      "action": "GEM_TENDER_SYNCED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/9541202",
+      "details": {
+        "bidNumber": "GEM/2025/B/9541202",
+        "title": "AI-Powered Electronic Toll Collection & Weigh-In-Motion Sensor Network",
+        "source": "Government e-Marketplace (GeM SPV)",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "8149271f1dac77b7c903277c783b2de3af2e8821fd6450032c5fb42782e18b2a",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:06:02.636Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319160930-23",
+      "actorId": "bidder-1",
+      "action": "GEM_TENDER_SYNCED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/7239011",
+      "details": {
+        "bidNumber": "GEM/2025/B/7239011",
+        "title": "Supply and Commissioning of Tier-III Mobile Container Data Center Units",
+        "source": "Government e-Marketplace (GeM SPV)",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "f3f3a594ba55cb50103d6f1ffa9f34ad5b4909d1955c36f0a2e060366442c513",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:06:00.930Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319159184-763",
+      "actorId": "bidder-1",
+      "action": "GEM_TENDER_SYNCED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/6124100",
+      "details": {
+        "bidNumber": "GEM/2025/B/6124100",
+        "title": "Comprehensive Annual Maintenance Contract (CAMC) for Network & Optical Fiber Infrastructure",
+        "source": "Government e-Marketplace (GeM SPV)",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "4d3d7dd9ca0e3a1e6ae59a23629fe203c5d0b2f49402b97e3fb3e0418c52f928",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:05:59.184Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319157240-89",
+      "actorId": "bidder-1",
+      "action": "GEM_TENDER_SYNCED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/881234",
+      "details": {
+        "bidNumber": "GEM/2025/B/881234",
+        "title": "Automated Smart City Surveillance & Edge AI Video Analytics Command Platform",
+        "source": "Government e-Marketplace (GeM SPV)",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "925704ef0feb42494f4aa8f80cc2ced752569cdb20fa510336b5cd81f5fa8895",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:05:57.240Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789319155560-234",
+      "actorId": "bidder-1",
+      "action": "GEM_TENDER_SYNCED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/902184",
+      "details": {
+        "bidNumber": "GEM/2025/B/902184",
+        "title": "Supply, Deployment and Facility Management of High-Availability Enterprise Server Cluster",
+        "source": "Government e-Marketplace (GeM SPV)",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "306d4dfe0c1c7f755dbb7f65271b66ac70e5429f652f1969d923c6b6c962edb1",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:05:55.560Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789318896678-658",
+      "actorId": "bidder-1",
+      "action": "STATUTORY_REGISTRY_VERIFICATION",
+      "entityType": "StatutoryCompliance",
+      "entityId": "VER-895516",
+      "details": {
+        "overallStatus": "VERIFIED_COMPLIANT",
+        "hash": "ce3ddc9f2c3145efc7040a4170c95be38a4529c0237ad524c5930c732374af50",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "088d86f038e372fb528b213f5b66270c3dd0747655e79aca94d3461f68eb9aeb",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T17:01:36.678Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789318745278-749",
+      "actorId": "bidder-1",
+      "action": "CORRIGENDUM_ISSUED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/6123456",
+      "details": {
+        "corrigendumId": "CORR-2026-656",
+        "title": "Extension of Due Date by 7 Calendar Days",
+        "amendmentType": "DATE_EXTENSION",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "932547a56b2493b12bd81d1d4bab574b86c72528086521384977faa6663572ab",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T16:59:05.278Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789318738619-856",
+      "actorId": "bidder-1",
+      "action": "PREBID_CORRIGENDUM_ISSUED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/6123456",
+      "details": {
+        "queryId": "PBQ-709989",
+        "response": "Yes, test reports from NABL accredited laboratories are fully valid.",
+        "corrId": "CORR-2026-967",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "a91e4ce752996b0cb3221422a623266034f4129f4e6d37a78ac9bc8b58a2e9e4",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T16:58:58.619Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789318714128-464",
+      "actorId": "bidder-1",
+      "action": "PREBID_QUERY_SUBMITTED",
+      "entityType": "Tender",
+      "entityId": "GEM/2025/B/6123456",
+      "details": {
+        "queryId": "PBQ-709989",
+        "clauseRef": "Section 8.2",
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "c6b9af04ff29018f69734cd74ee0d5949a7f9944f2a5852ace087f507b3396e3",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T16:58:34.128Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789299015639-787",
+      "actorId": "cmtyqpfji0000r5ic345hnyf3",
+      "action": "LOGOUT",
+      "entityType": "User",
+      "entityId": "cmtyqpfji0000r5ic345hnyf3",
+      "details": {
+        "_chain": {
+          "sequenceNumber": 1,
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "currentHash": "60830f58311c2b1c80bf70cd8cab42a4f846a52c1aa5c2755aa76ea652ec6c9a",
+          "tamperProofSeal": "SHA-256-WORM-STANDARD"
+        }
+      },
+      "createdAt": "2026-09-13T11:30:15.639Z"
+    },
+    {
+      "id": "log-1789298703030-927",
+      "actorId": "cmtzprc090003r59g3p5vy53s",
+      "action": "BID_SUBMIT",
+      "entityType": "Bid",
+      "entityId": "bid-1789298703029",
+      "details": {
+        "tenderRef": "TND-TEST-1789298681695",
+        "receiptNo": "ACK-CPPP-2025-959112",
+        "status": "SUBMITTED"
+      },
+      "createdAt": "2026-09-13T11:25:03.030Z"
+    },
+    {
+      "id": "log-1789245266416-93",
+      "actorId": "officer-1",
+      "action": "SECURITY_MALWARE_BLOCKED",
+      "entityType": "Document",
+      "entityId": "QUARANTINE",
+      "details": {
+        "filename": "malicious_exploit.pdf",
+        "threatName": "Suspicious Embedded Script/Executable Attachment",
+        "threatLevel": "CRITICAL",
+        "signatures": [
+          "PDF.Exploit.ExternalProcessLaunch",
+          "PDF.Payload.DangerousExecutableFileExtension"
+        ]
+      },
+      "createdAt": "2026-09-12T20:34:26.416Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "log-1789244581516-426",
+      "actorId": "officer-1",
+      "action": "TENDER_AWARD",
+      "entityType": "Tender",
+      "entityId": "cmtyqrp880000r52ou1qjvq7o",
+      "details": {
+        "winningBidId": "cmtyqsr6j0001r5io4nc01h4j",
+        "tenderRef": "GEM/2025/B/6123456",
+        "remarks": "Awarded to lowest evaluated responsive bidder (L1) at Rs. 20,558,000."
+      },
+      "createdAt": "2026-09-12T20:23:01.516Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "log-1789244158558-864",
+      "actorId": "officer-1",
+      "action": "DOCUMENT_UPLOAD",
+      "entityType": "Document",
+      "entityId": "cmtytrvd7000ar5iolcwtipxg",
+      "details": {
+        "name": "Test_Uploaded_GST_Certificate.pdf",
+        "type": "GST_CERTIFICATE",
+        "sha256": "426042eec1fe47bee7490cfed3d774b53c0a55b0144d55fcca63b750667300f7",
+        "sizeBytes": 1520
+      },
+      "createdAt": "2026-09-12T20:15:58.558Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "log-1789239162847-216",
+      "actorId": "cmtyqpi420003r5icvdgho7r5",
+      "action": "BID_SUBMIT",
+      "entityType": "Bid",
+      "entityId": "bid-1789239162847",
+      "details": {
+        "tenderRef": "GEM/2025/B/6123456",
+        "receiptNo": "ACK-CPPP-2025-998811",
+        "status": "SUBMITTED"
+      },
+      "createdAt": "2026-09-12T18:52:42.847Z"
+    },
+    {
+      "id": "log-1789239124737-390",
+      "actorId": "officer-1",
+      "action": "OFFICER_DECISION",
+      "entityType": "Bid",
+      "entityId": "bid-1",
+      "details": {
+        "decision": "QUALIFY",
+        "reason": "Proposal satisfies all mandatory technical specifications and Class-I MII criteria. Approved by Technical Evaluation Committee."
+      },
+      "createdAt": "2026-09-12T18:52:04.737Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "log-1789239121976-512",
+      "actorId": "bidder-1",
+      "action": "BID_SUBMIT",
+      "entityType": "Bid",
+      "entityId": "bid-1",
+      "details": {
+        "tenderRef": "GEM/2025/B/6123456",
+        "receiptNo": "ACK-CPPP-2025-998811",
+        "status": "SUBMITTED"
+      },
+      "createdAt": "2026-09-12T18:52:01.976Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1789238163842-437",
+      "actorId": "officer-1",
+      "action": "OFFICER_DECISION",
+      "entityType": "Bid",
+      "entityId": "bid-1",
+      "details": {
+        "decision": "QUALIFY",
+        "reason": "Proposal satisfies all mandatory technical specifications and Class-I MII criteria. Approved by Technical Evaluation Committee."
+      },
+      "createdAt": "2026-09-12T18:36:03.842Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "log-1789238159183-678",
+      "actorId": "bidder-1",
+      "action": "BID_SUBMIT",
+      "entityType": "Bid",
+      "entityId": "bid-1",
+      "details": {
+        "tenderRef": "GEM/2025/B/6123456",
+        "receiptNo": "ACK-CPPP-2025-998811",
+        "status": "SUBMITTED"
+      },
+      "createdAt": "2026-09-12T18:35:59.183Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-1",
+      "actorId": "officer-1",
+      "action": "OFFICER_DECISION",
+      "entityType": "Bid",
+      "entityId": "bid-3",
+      "details": {
+        "decision": "QUALIFY",
+        "reason": "Technically qualified for Packet B opening."
+      },
+      "createdAt": "2026-08-02T10:15:00.000Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    },
+    {
+      "id": "log-2",
+      "actorId": "bidder-1",
+      "action": "BID_SUBMIT",
+      "entityType": "Bid",
+      "entityId": "bid-1",
+      "details": {
+        "tenderRef": "GEM/2025/B/6123456",
+        "ackNumber": "ACK-CPPP-2025-884129"
+      },
+      "createdAt": "2026-08-16T14:30:00.000Z",
+      "actor": {
+        "id": "bidder-1",
+        "name": "ABC Tech Solutions Private Limited",
+        "email": "procurement@abctech.in"
+      }
+    },
+    {
+      "id": "log-3",
+      "actorId": "officer-1",
+      "action": "TENDER_PUBLISH",
+      "entityType": "Tender",
+      "entityId": "tender-1",
+      "details": {
+        "referenceNo": "GEM/2025/B/6123456"
+      },
+      "createdAt": "2026-08-01T10:00:00.000Z",
+      "actor": {
+        "id": "officer-1",
+        "name": "Rajesh Kumar",
+        "email": "rajesh.kumar@mha.gov.in"
+      }
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1789298703031-856",
+      "userId": "officer-1",
+      "title": "New Bid Submission Received",
+      "message": "ABC Tech Solutions Private Limited submitted a sealed proposal for TND-TEST-1789298681695 (₹ 4,25,00,000).",
+      "read": false,
+      "link": "/officer/bids",
+      "createdAt": "2026-09-13T11:25:03.031Z"
+    },
+    {
+      "id": "notif-1789298660704-480",
+      "userId": "bidder-1",
+      "title": "⚠️ Action Required: Clarification Notice for GEM/2025/B/902184",
+      "message": "Tender Evaluation Committee has requested formal clarification under Rule 173 GFR 2017 Clause 4.1: \"Please clarify discrepancy between GST certificate and CA Turnover statement....\". Deadline: 48 hours.",
+      "read": false,
+      "link": "/bidder/notifications",
+      "createdAt": "2026-09-13T11:24:20.704Z"
+    },
+    {
+      "id": "notif-1789239162848-263",
+      "userId": "officer-1",
+      "title": "New Bid Submission Received",
+      "message": "ABC Tech Solutions Private Limited submitted a sealed proposal for GEM/2025/B/6123456 (₹ 2,05,58,000).",
+      "read": false,
+      "link": "/officer/bids",
+      "createdAt": "2026-09-12T18:52:42.848Z"
+    },
+    {
+      "id": "notif-1789239124736-738",
+      "userId": "bidder-1",
+      "title": "Officer Evaluation Decision: QUALIFY",
+      "message": "Your bid for GEM/2025/B/6123456 was marked QUALIFY: \"Proposal satisfies all mandatory technical specifications and Class-I MII criteria. Approved by Technical Evaluation Committee.\"",
+      "read": false,
+      "link": "/bidder/my-bids",
+      "createdAt": "2026-09-12T18:52:04.736Z"
+    },
+    {
+      "id": "notif-1789239121983-111",
+      "userId": "officer-1",
+      "title": "New Bid Submission Received",
+      "message": "ABC Tech Solutions Private Limited submitted a sealed proposal for GEM/2025/B/6123456 (₹ 2,05,58,000).",
+      "read": false,
+      "link": "/officer/bids",
+      "createdAt": "2026-09-12T18:52:01.983Z"
+    },
+    {
+      "id": "notif-1789238163841-21",
+      "userId": "bidder-1",
+      "title": "Officer Evaluation Decision: QUALIFY",
+      "message": "Your bid for GEM/2025/B/6123456 was marked QUALIFY: \"Proposal satisfies all mandatory technical specifications and Class-I MII criteria. Approved by Technical Evaluation Committee.\"",
+      "read": false,
+      "link": "/bidder/my-bids",
+      "createdAt": "2026-09-12T18:36:03.841Z"
+    },
+    {
+      "id": "notif-1789238159184-141",
+      "userId": "officer-1",
+      "title": "New Bid Submission Received",
+      "message": "ABC Tech Solutions Private Limited submitted a sealed proposal for GEM/2025/B/6123456 (₹ 2,05,58,000).",
+      "read": false,
+      "link": "/officer/bids",
+      "createdAt": "2026-09-12T18:35:59.184Z"
+    },
+    {
+      "id": "notif-1",
+      "userId": "bidder-1",
+      "title": "Decision: QUALIFY",
+      "message": "Your bid for NIT/RAIL/2025/CCTV-AMC has been technically qualified by the procurement committee.",
+      "read": false,
+      "link": "/bidder/my-bids",
+      "createdAt": "2026-08-02T10:15:00.000Z"
+    },
+    {
+      "id": "notif-2",
+      "userId": "officer-1",
+      "title": "New Bid Received",
+      "message": "ABC Tech Solutions Private Limited submitted a proposal for GEM/2025/B/6123456.",
+      "read": false,
+      "link": "/officer/bids",
+      "createdAt": "2026-08-16T14:30:00.000Z"
+    }
+  ]
+}

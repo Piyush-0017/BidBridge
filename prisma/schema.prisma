@@ -1,0 +1,319 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+enum Role {
+  BIDDER
+  OFFICER
+  ADMIN
+}
+
+enum TenderStatus {
+  DRAFT
+  UNDER_APPROVAL
+  PUBLISHED
+  OPEN
+  CLOSED
+  AWARDED
+  CANCELLED
+}
+
+enum BidStatus {
+  DRAFT
+  SUBMITTED
+  UNDER_EVALUATION
+  TECHNICALLY_QUALIFIED
+  TECHNICALLY_DISQUALIFIED
+  FINANCIAL_EVALUATION
+  AWARDED
+  NOT_AWARDED
+}
+
+enum VerificationStatus {
+  PENDING
+  VERIFIED
+  FAILED
+  MISSING
+  INCONSISTENT
+  EXPIRED
+}
+
+enum RiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum DecisionType {
+  QUALIFY
+  DISQUALIFY
+  REQUEST_CLARIFICATION
+}
+
+model User {
+  id             String          @id @default(cuid())
+  email          String          @unique
+  name           String
+  passwordHash   String
+  role           Role
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  bidderProfile  BidderProfile?
+  officerProfile OfficerProfile?
+  bids           Bid[]
+  auditLogs      AuditLog[]
+  decisions      OfficerDecision[]
+  notifications Notification[]
+
+  @@index([role])
+  @@index([email])
+}
+
+model BidderProfile {
+  id           String     @id @default(cuid())
+  userId       String     @unique
+  companyName  String
+  gstin        String?
+  pan          String?
+  udyamNumber  String?
+  address      String?
+  bankDetails  Json?
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  documents    Document[]
+
+  @@index([gstin])
+  @@index([pan])
+}
+
+model OfficerProfile {
+  id           String @id @default(cuid())
+  userId       String @unique
+  department   String
+  designation  String
+  user         User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Tender {
+  id              String              @id @default(cuid())
+  referenceNo     String              @unique
+  title           String
+  department      String
+  category        String
+  description     String?
+  estimatedValue  Decimal?            @db.Decimal(18, 2)
+  bidEndAt        DateTime
+  status          TenderStatus        @default(DRAFT)
+  source          String              @default("PORTAL")
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  requirements    TenderRequirement[]
+  bids            Bid[]
+  documents       TenderDocument[]
+  corrigenda      Corrigendum[]
+
+  @@index([status])
+  @@index([department])
+  @@index([bidEndAt])
+}
+
+model TenderRequirement {
+  id          String             @id @default(cuid())
+  tenderId    String
+  code        String
+  description String
+  category    String
+  mandatory   Boolean            @default(true)
+  weight      Decimal?           @db.Decimal(5, 2)
+  tender      Tender             @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+  checks      ComplianceResult[]
+
+  @@index([tenderId])
+  @@index([code])
+}
+
+model TenderDocument {
+  id         String @id @default(cuid())
+  tenderId   String
+  name       String
+  storageKey String
+  tender     Tender @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+
+  @@index([tenderId])
+}
+
+model Corrigendum {
+  id          String   @id @default(cuid())
+  tenderId    String
+  title       String
+  description String
+  publishedAt DateTime @default(now())
+  tender      Tender   @relation(fields: [tenderId], references: [id], onDelete: Cascade)
+
+  @@index([tenderId])
+}
+
+model Bid {
+  id               String             @id @default(cuid())
+  tenderId         String
+  bidderId         String
+  status           BidStatus          @default(DRAFT)
+  technicalScore   Decimal?           @db.Decimal(6, 2)
+  financialScore   Decimal?           @db.Decimal(6, 2)
+  complianceScore  Decimal?           @db.Decimal(6, 2)
+  riskLevel        RiskLevel?
+  submittedAt      DateTime?
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  tender           Tender             @relation(fields: [tenderId], references: [id])
+  bidder           User               @relation(fields: [bidderId], references: [id])
+  documents        Document[]
+  compliance       ComplianceResult[]
+  evidence         Evidence[]
+  recommendation   AIRecommendation?
+  decision         OfficerDecision?
+  riskResult       RiskResult?
+
+  @@unique([tenderId, bidderId])
+  @@index([status])
+  @@index([bidderId])
+  @@index([tenderId])
+}
+
+model Document {
+  id               String              @id @default(cuid())
+  bidId            String?
+  bidderProfileId  String?
+  name             String
+  documentType     String
+  storageKey       String
+  sha256           String?
+  mimeType         String?
+  sizeBytes        Int?
+  status           VerificationStatus  @default(PENDING)
+  uploadedAt       DateTime            @default(now())
+  verifiedAt       DateTime?
+  bid              Bid?                @relation(fields: [bidId], references: [id])
+  bidderProfile    BidderProfile?      @relation(fields: [bidderProfileId], references: [id])
+  verification     VerificationResult?
+  evidence         Evidence[]
+
+  @@index([bidId])
+  @@index([bidderProfileId])
+  @@index([status])
+}
+
+model VerificationResult {
+  id              String             @id @default(cuid())
+  documentId      String             @unique
+  status          VerificationStatus
+  confidence      Decimal?           @db.Decimal(5, 2)
+  extractedData   Json?
+  source          String?
+  sourceReference String?
+  reason          String?
+  verifiedAt      DateTime           @default(now())
+  document        Document           @relation(fields: [documentId], references: [id], onDelete: Cascade)
+}
+
+model ComplianceResult {
+  id            String             @id @default(cuid())
+  bidId         String
+  requirementId String
+  status        VerificationStatus
+  score         Decimal?           @db.Decimal(6, 2)
+  reason        String?
+  evidenceText  String?
+  bid           Bid                @relation(fields: [bidId], references: [id], onDelete: Cascade)
+  requirement   TenderRequirement  @relation(fields: [requirementId], references: [id], onDelete: Cascade)
+
+  @@unique([bidId, requirementId])
+  @@index([bidId])
+  @@index([status])
+}
+
+model Evidence {
+  id              String    @id @default(cuid())
+  bidId           String
+  documentId      String?
+  sourceSystem    String?
+  sourceReference String?
+  pageNumber      Int?
+  fieldName       String?
+  fieldValue      String?
+  excerpt         String?
+  createdAt       DateTime  @default(now())
+  bid             Bid       @relation(fields: [bidId], references: [id], onDelete: Cascade)
+  document        Document? @relation(fields: [documentId], references: [id])
+
+  @@index([bidId])
+}
+
+model RiskResult {
+  id        String    @id @default(cuid())
+  bidId     String    @unique
+  score     Decimal   @db.Decimal(6, 2)
+  level     RiskLevel
+  factors   Json
+  createdAt DateTime  @default(now())
+  bid       Bid       @relation(fields: [bidId], references: [id], onDelete: Cascade)
+}
+
+model AIRecommendation {
+  id          String       @id @default(cuid())
+  bidId       String       @unique
+  action      DecisionType
+  confidence  Decimal?     @db.Decimal(5, 2)
+  explanation String
+  createdAt   DateTime     @default(now())
+  bid         Bid          @relation(fields: [bidId], references: [id], onDelete: Cascade)
+}
+
+model OfficerDecision {
+  id         String       @id @default(cuid())
+  bidId      String       @unique
+  officerId  String
+  decision   DecisionType
+  reason     String
+  createdAt  DateTime     @default(now())
+  bid        Bid          @relation(fields: [bidId], references: [id], onDelete: Cascade)
+  officer    User         @relation(fields: [officerId], references: [id])
+
+  @@index([officerId])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String
+  entityType String
+  entityId   String?
+  details    Json?
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+  actor      User?    @relation(fields: [actorId], references: [id])
+
+  @@index([actorId])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  link      String?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, read])
+  @@index([createdAt])
+}

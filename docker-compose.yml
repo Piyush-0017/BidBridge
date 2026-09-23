@@ -1,0 +1,56 @@
+version: "3.8"
+
+services:
+  # ---------------------------------------------------------------------------
+  # Central e-Procurement Portal Application (Next.js Standalone)
+  # ---------------------------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sih26100-procurement-portal
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    depends_on:
+      - minio
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - procurement-net
+
+  # ---------------------------------------------------------------------------
+  # S3-Compatible Cloud Object Storage (MinIO)
+  # ---------------------------------------------------------------------------
+  minio:
+    image: minio/minio:latest
+    container_name: sih26100-minio-storage
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000" # S3 API endpoint
+      - "9001:9001" # Web Management Console
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    volumes:
+      - minio_data:/data
+    networks:
+      - procurement-net
+
+networks:
+  procurement-net:
+    driver: bridge
+
+volumes:
+  minio_data:
+    driver: local
